@@ -28,6 +28,10 @@ button {
     margin-bottom: 15px;
 }
 
+.container2 {
+    border: none;
+}
+
 img {
     padding: 1px;
     max-width: 80px;
