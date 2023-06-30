@@ -1,14 +1,38 @@
 $(document).ready(function() {
-    $("#text").hide();
+    // Images can no longer be moved other than by clicking
+    $("img").attr('draggable', false);
 
-    $("#btn").click(function() {
-        $("#text").show();
-    })
+    // If image is clicked, move image to the first container
+    $("#arc1-c2").click(function() {
+        $("#arc1-c2").appendTo("#arc1");
+    });
+    $("#arc2-c2").click(function() {
+        $("#arc2-c2").appendTo("#arc1");
+    });
+    $("#arc3-c2").click(function() {
+        $("#arc3-c2").appendTo("#arc1");
+    });
+    $("#arc4-c2").click(function() {
+        $("#arc4-c2").appendTo("#arc1");
+    });
+    $("#arc5-c2").click(function() {
+        $("#arc5-c2").appendTo("#arc1");
+    });
+    $("#arc6-c2").click(function() {
+        $("#arc6-c2").appendTo("#arc1");
+    });
+    
 
-    $("#hide").click(function() {
-        $("#text").hide();
-    })
-})
+    function mix() {
+
+    }
+
+    function result() {
+        // “Vous avez gagné”
+        // “Vous avez perdu”
+    }
+
+});
 
 // print vous avez perdu
 

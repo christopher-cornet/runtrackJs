@@ -13,20 +13,15 @@
     <main>
         <div class="container">
             <div id="arc1"></div>
-            <div id="arc2"></div>
-            <div id="arc3"></div>
-            <div id="arc4"></div>
-            <div id="arc5"></div>
-            <div id="arc6"></div>
         </div>
 
         <div class="container2">
-            <div id="arc1"><img src="img/arc1.png" alt=""></div>
-            <div id="arc2"><img src="img/arc2.png" alt=""></div>
-            <div id="arc3"><img src="img/arc3.png" alt=""></div>
-            <div id="arc4"><img src="img/arc4.png" alt=""></div>
-            <div id="arc5"><img src="img/arc5.png" alt=""></div>
-            <div id="arc6"><img src="img/arc6.png" alt=""></div>
+            <div id="arc1-c2"><img src="img/arc1.png" alt=""></div>
+            <div id="arc2-c2"><img src="img/arc2.png" alt=""></div>
+            <div id="arc3-c2"><img src="img/arc3.png" alt=""></div>
+            <div id="arc4-c2"><img src="img/arc4.png" alt=""></div>
+            <div id="arc5-c2"><img src="img/arc5.png" alt=""></div>
+            <div id="arc6-c2"><img src="img/arc6.png" alt=""></div>
         </div>
     </main>
 </body>
