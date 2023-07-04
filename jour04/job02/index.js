@@ -6,12 +6,12 @@ let laplateforme = {
     "creation" : "2019"
 }
 
-function jsonValueKey(json) {
-
+function jsonValueKey(json, key) {
+    console.log(json[key]);
 }
 
 $(document).ready(function() {
     $("#button").click(function() {
-        jsonValueKey(laplateforme);
+        jsonValueKey(laplateforme, "name");
     });
 });
