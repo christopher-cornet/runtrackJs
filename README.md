@@ -1,6 +1,6 @@
 # Runtrack JS
 
-Two weeks to learn Javascript and Jquery <br>
+Two weeks to learn Javascript !<br>
 ```
 ● Use the console
 ● Use loops
