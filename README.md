@@ -2,6 +2,8 @@
 
 Two weeks to learn Javascript !<br>
 ```
+Targeted skills
+
 ● Use the console
 ● Use loops
 ● Algorithm
