@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!empty($_SESSION['user'])) {
+    $name = $_SESSION['user']; 
+}
+
+$db = new PDO ('mysql:host=localhost; dbname=utilisateurs', 'root', '');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

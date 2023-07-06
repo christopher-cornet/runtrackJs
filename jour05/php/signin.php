@@ -18,36 +18,20 @@ if (isset($_POST['register_name'])) {
         $lowercase = preg_match('@[a-z]@', $password);
         $number = preg_match('@[0-9]@', $password);
         $special_chars = preg_match('@[^\w]@', $password);
-        if (!$uppercase) {
-            echo 'Le mot de passe doit inclure au moins 1 lettre majuscule.';
-            if (!$lowercase) {
-                echo 'Le mot de passe doit inclure au moins 1 lettre minuscule.';
-            }
-                if (!$number) {
-                    echo 'Le mot de passe doit inclure au moins 1 chiffre.';
-                }
-                    if (!$special_chars) {
-                        echo 'Le mot de passe doit inclure au moins 1 caractère spécial.';
-                    }
-                        if (strlen($password) < 8) {
-                            echo 'Le mot de passe doit inclure au moins 8 caractères.';
-                        }
-                        else {
-                            echo 'Mot de passe valide.';
-                            $query = "INSERT INTO utilisateurs (id, nom, prenom, email, password) VALUES ('', '$nom', '$prenom', '$email', '$password')";
-                            $db->query($query);
-                            header('Location: connexion.php');
-                        }
+        if (!$uppercase && !$lowercase && !$number && !$special_chars && strlen($password) < 8) {
+            echo 'Mot de passe invalide.';
         }
         else {
-            echo 'Mot de passe invalide.';
+            echo 'Mot de passe valide.';
+            $query = "INSERT INTO utilisateurs (id, nom, prenom, email, password) VALUES ('', '$nom', '$prenom', '$email', '$password')";
+            $db->query($query);
+            header('Location: login.php');
         }
     }
     else {
         echo "Informations manquantes. Vous ne pouvez pas vous inscrire.";
     }
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -70,13 +54,13 @@ if (isset($_POST['register_name'])) {
         </nav>
     </header>
     <main>
-        <form action="inscription.php" method="post">
+        <form action="" method="post">
             <input type="text" placeholder="Nom d'utilisateur*" name="user_login" required>
             <input type="text" placeholder="Prenom*" name="firstname" required>
             <input type="text" placeholder="Nom*" name="lastname" required>
             <input type="password" placeholder="Mot de passe*" name="password" required>
             <input type="password" placeholder="Confirmation mot de passe*" name="confirmpassword" required>
-            <input class="register" type="submit" name="register_name" value="S'inscrire">
+            <button class="register" type="submit" name="register_name" value="S'inscrire">S'inscrire</button>
         </form>
     </main>
 </body>
